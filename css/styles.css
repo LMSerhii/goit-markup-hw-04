@@ -159,7 +159,6 @@ button {
   padding: 24px 0;
 
   color: var(--dark-color);
-  /* font-size: 16px; */
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -196,8 +195,20 @@ button {
 
 /* ===== heroe  ===== */
 .heroe {
-  background-color: var(--hero-background-color);
+  max-width: 1440px;
+  margin: 0 auto;
   padding: 188px 0;
+  
+  background-color: var(--hero-background-color);
+  background-image: linear-gradient(
+      rgba(46, 47, 66, 0.7),
+      rgba(46, 47, 66, 0.7)
+    ),
+    url(../images/hero-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
 }
 
 .heroe-title {
@@ -210,6 +221,7 @@ button {
   font-size: 56px;
   font-weight: 700;
   line-height: 1.07;
+  letter-spacing: 0.02em;
 }
 
 .heroe-btn {
@@ -225,6 +237,7 @@ button {
   border-radius: 4px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   border: none;
+
   padding: 16px 32px;
   min-width: 169px;
 }
@@ -295,9 +308,11 @@ button {
 
 .our-team-card {
   border-radius: 0px 0px 4px 4px;
-
   background-color: var(--white-background-color);
   flex-basis: calc((100% - 24px * 3) / 4);
+  box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .our-team-card-content {
@@ -318,6 +333,49 @@ button {
   color: var(--text-color);
   line-height: 1.5;
   letter-spacing: 0.02em;
+  margin-bottom: 8px;
+}
+
+.our-team-social-media-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+}
+
+.our-team-social-media-item {
+}
+.our-team-social-media-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--pressed-state-color);
+}
+
+.our-team-social-media-link:focus,
+.our-team-social-media-link:hover {
+  background-color: var(--primary-brand-color);
+}
+
+.our-team-social-media-icon {
+  fill: var(--ligh-color);
+}
+
+.customers {
+}
+
+.customers-header {
+}
+
+.customers-list {
+}
+
+.customers-item {
+}
+
+.customers-icon {
 }
 
 /*
@@ -399,6 +457,14 @@ button {
   padding: 100px 0;
 }
 
+.footer-container {
+  display: flex;
+}
+
+.footer-main {
+  margin-right: 121px;
+}
+
 .footer-logo-link {
   display: inline-block;
   margin-bottom: 16px;
@@ -409,4 +475,42 @@ button {
   width: 264px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+}
+
+.footer-social-media {
+}
+
+.footer-social-media-header {
+  color: var(--ligh-color);
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  margin-bottom: 16px;
+}
+
+.footer-social-media-list {
+  display: flex;
+  gap: 16px;
+}
+
+.fotter-social-media-item {
+}
+
+.footer-media-social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--pressed-state-color);
+}
+
+.footer-media-social-link:hover,
+.footer-media-social-link:focus {
+  background-color: var(--success-color);
+}
+
+.footer-social-media-icons {
+  fill: var(--ligh-color);
 }
