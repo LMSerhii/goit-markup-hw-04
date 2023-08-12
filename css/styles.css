@@ -134,6 +134,9 @@ button {
 
 .header {
   border-bottom: 1px solid var(--accent-color);
+  box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08),
+    0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+    0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header-container {
@@ -166,6 +169,12 @@ button {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  transition: color var(--animation);
+}
+
+.header-nav-link.current {
+  color: var(--primary-brand-color);
 }
 
 .header-nav-link:hover,
@@ -177,7 +186,7 @@ button {
   content: '';
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -1px;
   display: block;
   width: 100%;
   height: 4px;
@@ -352,7 +361,7 @@ button {
 }
 
 .our-team-card-content {
-  padding: 32px 16px;
+  padding: 32px 0;
   text-align: center;
 }
 
@@ -412,6 +421,13 @@ button {
 .customers-header {
   text-align: center;
   margin-bottom: 72px;
+
+  color: var(--dark-color);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 1.11;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
 }
 
 .customers-list {
@@ -425,6 +441,7 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
+
   width: 168px;
   height: 88px;
 
@@ -570,10 +587,11 @@ button {
 
 .footer-container {
   display: flex;
+  align-items: baseline;
 }
 
 .footer-main {
-  margin-right: 121px;
+  margin-right: 120px;
 }
 
 .footer-logo-link {
@@ -592,7 +610,7 @@ button {
 }
 
 .footer-social-media-header {
-  color: var(--ligh-color);
+  color: var(--white-background-color);
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -605,14 +623,19 @@ button {
 }
 
 .fotter-social-media-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
 }
 
 .footer-media-social-link {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 40px;
-  height: 40px;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: var(--pressed-state-color);
 
@@ -627,6 +650,12 @@ button {
 .footer-social-media-icons {
   fill: var(--ligh-color);
 }
+
+/*
+   |==================================
+   |  modal window
+   |==================================
+*/
 
 .backdrop {
   position: fixed;
@@ -650,11 +679,11 @@ button {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) scale(1);
   opacity: 1;
 
   width: 408px;
-  min-height: 504px;
+  min-height: 584px;
 
   border-radius: 4px;
   background: var(--modal-background-color);
@@ -665,7 +694,7 @@ button {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50%, -70%);
+  transform: translate(-50%, -70%) scale(1);
   opacity: 0;
 }
 
@@ -682,7 +711,25 @@ button {
   padding: 0;
   background-color: var(--accent-color);
   border-radius: 50%;
-  border: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  transition: background-color var(--animation), border var(--animation);
 }
+
+.modal-btn:hover,
+.modal-btn:focus {
+  background-color: var(--primary-brand-color);
+  border: none;
+}
+
 .modal-btn-icon {
+  transition: fill var(--animation);
 }
+
+.modal-btn:hover .modal-btn-icon,
+.modal-btn:focus .modal-btn-icon {
+  fill: #ffffff;
+}
+
+
+
