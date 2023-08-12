@@ -665,7 +665,7 @@ button {
 }
 
 .backdrop.is-hidden .modal {
-  transform: translate(-50% -70%);
+  transform: translate(-50%, -70%);
   opacity: 0;
 }
 
