@@ -676,7 +676,7 @@ button {
   width: 100%;
   height: 100%;
 
-  background-color: var(-modal-overlay-color, rgba(46, 47, 66, 0.4));
+  background-color: var(rgba(46, 47, 66, 0.4));
 
   transition: opacity var(--animation), visibility var(--animation);
 }
@@ -693,7 +693,6 @@ button {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
 
-
   width: 408px;
   min-height: 584px;
 
@@ -702,7 +701,7 @@ button {
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
     0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
 
-  transition: transform var(--animation) 250ms;
+  transition: transform var(--animation);
 }
 
 .backdrop.is-hidden .modal {
