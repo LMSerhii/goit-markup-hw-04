@@ -581,8 +581,8 @@ button {
   transition: transform var(--animation);
 }
 
-.product-item:hover .overlay,
-.product-item:focus .overlay {
+.product-link:hover .overlay,
+.product-link:focus .overlay {
   transform: translateY(0);
 }
 
